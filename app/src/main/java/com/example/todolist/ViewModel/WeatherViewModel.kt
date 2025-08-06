@@ -22,7 +22,7 @@ import retrofit2.Retrofit
 import retrofit2.Retrofit.*
 
 sealed interface WeatherUiState{
-    data class Successs(val weatherInfo: WeatherData, val astronomyInfo: AstronomyInfo): WeatherUiState
+    data class Success(val weatherInfo: WeatherData, val astronomyInfo: AstronomyInfo): WeatherUiState
     object Error: WeatherUiState // Error screen
     object Load: WeatherUiState // Loading screen
 }
@@ -59,7 +59,7 @@ class WeatherViewModel(private val networkWeatherRepository: NetworkWeatherRepos
         viewModelScope.launch {
             weatherUiState = WeatherUiState.Load
             weatherUiState = try{
-                WeatherUiState.Successs(
+                WeatherUiState.Success(
                     networkWeatherRepository.getWeatherInfo(),
                     networkWeatherRepository.getAstronomyInfo()
                 )

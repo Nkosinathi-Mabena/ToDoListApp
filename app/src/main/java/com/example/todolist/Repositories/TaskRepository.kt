@@ -26,14 +26,6 @@ class TaskRepository(private val taskDao: TaskDao) { // This repository that act
         taskDao.deleteTask(task)
     }
 
-    fun getTasksByPriority(priority: String): Flow<List<TaskEntity>> =
-        taskDao.getTasksByPriority(priority)
 
-   fun getCompletedTasks(): Flow<List<TaskEntity>> =
-        taskDao.getCompletedTasks()
-
-
-    fun getIncompleteTasks(): Flow<List<TaskEntity>> =
-        taskDao.getIncompleteTasks()
 
 }

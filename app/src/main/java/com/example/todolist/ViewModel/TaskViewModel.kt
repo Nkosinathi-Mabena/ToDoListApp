@@ -40,26 +40,7 @@ class TaskViewModel(private val repository: TaskRepository) : ViewModel() {
     fun deleteTask(task: TaskEntity) = viewModelScope.launch {
         repository.delete(task)
     }
-/*
-    fun loadTasksByPriority(priority: String): StateFlow<List<TaskEntity>> =
-        repository.getTasksByPriority(priority).stateIn(
-            viewModelScope, SharingStarted.WhileSubscribed(), emptyList()
-        )
 
-    fun loadCompletedTasks(): StateFlow<List<TaskEntity>> =
-        repository.getCompletedTasks().stateIn(
-            viewModelScope, SharingStarted.WhileSubscribed(), emptyList()
-        )
-
-
-
-
-    fun loadIncompleteTasks(): StateFlow<List<TaskEntity>> =
-        repository.getIncompleteTasks().stateIn(
-            viewModelScope, SharingStarted.WhileSubscribed(), emptyList()
-        )
-
- */
 
 
 }
