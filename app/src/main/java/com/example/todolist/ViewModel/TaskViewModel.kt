@@ -12,9 +12,7 @@ import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.launch
 
-
 class TaskViewModel(private val repository: TaskRepository) : ViewModel() {
-
 
     val tasks: StateFlow<List<TaskEntity>> = repository.allTasks
         .map { it }
@@ -40,9 +38,6 @@ class TaskViewModel(private val repository: TaskRepository) : ViewModel() {
     fun deleteTask(task: TaskEntity) = viewModelScope.launch {
         repository.delete(task)
     }
-
-
-
 }
 
 class TaskViewModelFactory(private val repository: TaskRepository) : ViewModelProvider.Factory {

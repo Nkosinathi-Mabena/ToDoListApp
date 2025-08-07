@@ -5,7 +5,6 @@ import retrofit2.http.Query
 import retrofit2.http.GET
 import com.example.todolist.Model.WeatherData
 
-
 interface WeatherAPI{
     @GET("v1/current.json")
     suspend fun getWeather(

@@ -1,10 +1,7 @@
 package com.example.todolist.Model
 
-//import android.location.Location
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
-
-
 
 @Serializable
 data class WeatherData(

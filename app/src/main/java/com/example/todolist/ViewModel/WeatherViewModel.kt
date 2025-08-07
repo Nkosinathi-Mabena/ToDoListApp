@@ -75,6 +75,7 @@ class WeatherViewModel(private val networkWeatherRepository: NetworkWeatherRepos
     }
 
 }
+
 class WeatherViewModelProvider(private val repository: NetworkWeatherRepository): ViewModelProvider.Factory{
     override fun <T : ViewModel> create(modelClass: Class<T>): T {
         return WeatherViewModel(repository) as T

@@ -17,5 +17,4 @@ class NetworkWeatherRepository(private val weatherApi: WeatherAPI): WeatherRepos
     val currentDate = formatter.format(Date())
     override suspend fun getWeatherInfo(): WeatherData = weatherApi.getWeather(apiKey = "43905c745e8b4403990113115252306",location = "Sandton")
     override suspend fun getAstronomyInfo(): AstronomyInfo = weatherApi.getAstronomy(apiKey = "43905c745e8b4403990113115252306", location = "Sandton", date = currentDate)
-
 }

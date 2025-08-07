@@ -14,7 +14,6 @@ import androidx.compose.ui.unit.sp
 import com.example.todolist.Model.TitleSummary
 import androidx.compose.foundation.lazy.items
 
-
 @Composable
 fun TitleListSection(
     summaries: List<TitleSummary>,

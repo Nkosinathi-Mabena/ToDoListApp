@@ -1,6 +1,5 @@
 package com.example.todolist.ui
 
-
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -14,7 +13,6 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.todolist.Model.TitleSummary
-
 
 @Composable
 fun TitleCard(summary: TitleSummary, onClick: () -> Unit) {

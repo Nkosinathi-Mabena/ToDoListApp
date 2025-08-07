@@ -13,8 +13,6 @@ import com.example.todolist.ViewModel.TaskViewModelFactory
 import com.example.todolist.ui.HomeScreenView
 import com.example.todolist.ui.theme.ToDoListTheme
 
-
-
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -34,7 +32,6 @@ class MainActivity : ComponentActivity() {
                     viewModel = taskViewModel
                 )
             }
-
         }
     }
 }

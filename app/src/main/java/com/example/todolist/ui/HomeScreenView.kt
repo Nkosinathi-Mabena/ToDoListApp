@@ -1,7 +1,5 @@
 package com.example.todolist.ui
 
-
-
 import androidx.compose.foundation.layout.*
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Scaffold
@@ -32,11 +30,7 @@ import kotlinx.serialization.json.Json
 import okhttp3.MediaType.Companion.toMediaType
 import retrofit2.Retrofit
 
-
-
-//Boy oh boy😪
 @OptIn(ExperimentalMaterial3Api::class) //Lets try material 3
-
 @Composable
 fun HomeScreenView(
 
@@ -216,14 +210,9 @@ fun HomeScreenView(
             showDialog = false
         }
     )
-
-
-
-
 }
 
 
-//data class TestweatherAPI( val location: String, val sunrise: String, val sunset: String, val temperature: String)
 
 
 
